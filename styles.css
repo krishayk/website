@@ -1,0 +1,150 @@
+/* Basic Reset */
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    font-family: 'Dancing Script', cursive;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: #f9f9f9;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Hero Section */
+#hero {
+    background: url('hero-background.png') no-repeat center center;
+    background-size: cover;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 100px 0;
+}
+
+#hero h1 {
+    font-size: 2.5em;
+}
+
+#hero p {
+    font-size: 1.2em;
+}
+
+/* Key Services Overview */
+#services-overview {
+    background: #f4f4f4;
+    padding: 50px 0;
+}
+
+.service {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.service h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.explore-all {
+    display: block;
+    margin: 20px auto;
+    font-weight: bold;
+}
+
+/* Testimonials */
+#testimonials {
+    background: #fff;
+    padding: 50px 0;
+}
+
+.testimonial {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.testimonial p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.placeholder {
+    width: 100px;
+    height: 100px;
+    background: #ddd;
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+
+/* Footer */
+footer {
+    background: #f9f9f9;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-media .placeholder {
+    width: 120px;
+    height: 40px;
+    background: #ddd;
+}
+
+/* Floating CTA Button */
+.floating-cta {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #007BFF;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.floating-cta:hover {
+    background: #0056b3;
+}

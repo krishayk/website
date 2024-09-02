@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Consulting Agency</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <!-- <img src="logo.png" alt="Logo" class="logo"> -->
+            <div class="logo">Your Logo</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Transform Your Business with Expert Consulting</h1>
+            <p>Specializing in Websites, Marketing, and Growth Strategies</p>
+        </div>
+    </section>
+
+    <!-- Key Services Overview -->
+    <section id="services-overview">
+        <div class="container">
+            <div class="service">
+                <!-- <img src="website-design.png" alt="Website Design"> -->
+                <div class="placeholder"></div>
+                <h2>Website Design</h2>
+                <p>Creating visually stunning and functional websites to help your business thrive online.</p>
+                <a href="#services" class="btn" onclick="scrollToSection('services')">Learn More</a>
+            </div>
+            <div class="service">
+                <!-- <img src="digital-marketing.png" alt="Digital Marketing"> -->
+                <div class="placeholder"></div>
+                <h2>Digital Marketing</h2>
+                <p>Implementing effective strategies to boost your online presence and drive growth.</p>
+                <a href="#services" class="btn" onclick="scrollToSection('services')">Learn More</a>
+            </div>
+            <div class="service">
+                <!-- <img src="business-strategy.png" alt="Business Strategy"> -->
+                <div class="placeholder"></div>
+                <h2>Business Strategy</h2>
+                <p>Helping you develop and execute strategies to achieve your business goals.</p>
+                <a href="#services" class="btn" onclick="scrollToSection('services')">Learn More</a>
+            </div>
+            <a href="#services" class="btn explore-all">Explore All Services</a>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="testimonial">
+                <p>"Exceptional service and results. Highly recommended!"</p>
+                <!-- <img src="client1.png" alt="Client 1"> -->
+                <div class="placeholder"></div>
+                <p>- Client 1</p>
+            </div>
+            <div class="testimonial">
+                <p>"The team transformed our online presence and drove significant growth."</p>
+                <!-- <img src="client2.png" alt="Client 2"> -->
+                <div class="placeholder"></div>
+                <p>- Client 2</p>
+            </div>
+            <!-- Add more testimonials as needed -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- <img src="social-media-icons.png" alt="Social Media"> -->
+            <div class="social-media">
+                <!-- Icons would go here -->
+                <div class="placeholder"></div>
+            </div>
+            <ul class="quick-links">
+                <li><a href="#privacy-policy">Privacy Policy</a></li>
+                <li><a href="#terms-of-service">Terms of Service</a></li>
+                <!-- Add more quick links as needed -->
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Floating CTA Button -->
+    <a href="#contact" class="floating-cta">Contact Us</a>
+
+    <!-- JavaScript -->
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
