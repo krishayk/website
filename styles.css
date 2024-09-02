@@ -2,7 +2,8 @@
 body, h1, h2, p, ul, li, a {
     margin: 0;
     padding: 0;
-    font-family: 'Lobster', cursive; /* Slightly loopy font */
+    font-family: 'Open Sans', sans-serif; /* Nice, elegant font */
+    font-weight: bold; /* Make text bold */
     transition: all 0.3s ease; /* Smooth transitions */
 }
 
@@ -67,7 +68,7 @@ nav {
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 25px; /* Slightly larger button */
     background: #007BFF;
     color: white;
     text-decoration: none;
@@ -135,12 +136,13 @@ footer {
     transform: translateX(-50%);
     background: #007BFF;
     color: white;
-    padding: 20px 40px;
+    padding: 22px 44px; /* Bigger button */
     border-radius: 50px;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1.7em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background 0.3s ease, transform 0.3s ease;
+    text-align: center;
 }
 
 .floating-cta:hover {
@@ -207,4 +209,29 @@ footer {
     right: 10px;
     font-size: 1.7em;
     cursor: pointer;
+}
+
+/* View Websites Section */
+#view-websites {
+    display: none;
+    margin: 20px auto; /* Center the preview */
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    max-height: 0; /* Hidden by default */
+    opacity: 0; /* Hidden by default */
+    overflow: hidden;
+}
+
+#view-websites.show {
+    max-height: 500px; /* Adjust height as needed */
+    opacity: 1;
+}
+
+/* Center Contact Us Button */
+.contact-us {
+    text-align: center;
+    margin: 30px 0; /* Space around the button */
 }
