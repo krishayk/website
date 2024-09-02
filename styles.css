@@ -2,59 +2,50 @@
 body, h1, h2, p, ul, li, a {
     margin: 0;
     padding: 0;
-    font-family: 'Lobster', cursive;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
+    font-family: 'Lobster', cursive; /* Slightly loopy font */
+    transition: all 0.3s ease; /* Smooth transitions */
 }
 
 /* Header */
 header {
-    background: #f9f9f9;
+    background: #007BFF; /* Placeholder color */
     padding: 10px 0;
-    border-bottom: 1px solid #ddd;
+    text-align: center; /* Centered content */
+    color: white;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
+/* Hide navbar items */
+nav {
+    display: none;
 }
 
 .logo {
     font-size: 1.5em;
-    font-weight: bold;
 }
 
 /* Hero Section */
 #hero {
-    background: url('hero-background.png') no-repeat center center;
-    background-size: cover;
-    color: white;
+    background: #f0f0f0; /* Placeholder background color */
+    color: black;
     text-align: center;
     padding: 100px 0;
+    opacity: 0; /* Hidden by default */
+    transform: translateY(20px); /* Start position for animation */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Animation */
 }
 
-#hero h1 {
-    font-size: 2.5em;
-}
-
-#hero p {
-    font-size: 1.2em;
+#hero h1, #hero p {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Key Services Overview */
 #services-overview {
     background: #f4f4f4;
     padding: 50px 0;
+    opacity: 0; /* Hidden by default */
+    transform: translateY(20px); /* Start position for animation */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Animation */
 }
 
 .service {
@@ -65,11 +56,13 @@ nav a {
 .service h2 {
     font-size: 1.8em;
     margin-bottom: 10px;
+    font-weight: normal;
 }
 
 .service p {
     font-size: 1.1em;
     color: #666;
+    font-weight: normal;
 }
 
 .btn {
@@ -89,13 +82,16 @@ nav a {
 .explore-all {
     display: block;
     margin: 20px auto;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 /* Testimonials */
 #testimonials {
     background: #fff;
     padding: 50px 0;
+    opacity: 0; /* Hidden by default */
+    transform: translateY(20px); /* Start position for animation */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Animation */
 }
 
 .testimonial {
@@ -106,6 +102,7 @@ nav a {
 .testimonial p {
     font-size: 1.2em;
     color: #333;
+    font-weight: normal;
 }
 
 .placeholder {
@@ -133,20 +130,22 @@ footer {
 /* Floating CTA Button */
 .floating-cta {
     position: fixed;
-    bottom: 80px; /* Adjusted to be higher */
+    bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
     background: #007BFF;
     color: white;
-    padding: 20px 40px; /* Increased size */
+    padding: 20px 40px;
     border-radius: 50px;
     text-decoration: none;
-    font-size: 1.4em; /* Larger font size */
+    font-size: 1.5em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .floating-cta:hover {
     background: #0056b3;
+    transform: translateX(-50%) scale(1.1); /* Slight zoom effect */
 }
 
 /* Popup */
@@ -158,25 +157,39 @@ footer {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex; /* Centering method */
     justify-content: center;
     align-items: center;
 }
 
 .popup-content {
     background: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
-    width: 300px;
+    width: 350px;
     text-align: center;
     position: relative;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Hidden by default */
+    transform: scale(0.8); /* Start position for animation */
+    transition: opacity 0.3s ease-in, transform 0.3s ease-in; /* Animation */
+}
+
+.popup-content.show {
+    opacity: 1;
+    transform: scale(1); /* Final position */
 }
 
 .popup-content h2 {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    font-weight: normal;
 }
 
 .popup-content p {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    font-weight: normal;
 }
 
 .popup-content a {
@@ -192,6 +205,6 @@ footer {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 1.5em;
+    font-size: 1.7em;
     cursor: pointer;
 }

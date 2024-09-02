@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Consulting Agency</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap">
 </head>
 <body>
     <!-- Header -->
@@ -112,17 +112,51 @@
 
     <!-- JavaScript -->
     <script>
-        function scrollToSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-        }
+      document.addEventListener('DOMContentLoaded', function() {
+    // Fade in sections as they scroll into view
+    function fadeInOnScroll() {
+        const sections = document.querySelectorAll('#hero, #services-overview, #testimonials');
+        const windowHeight = window.innerHeight;
+        
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            
+            if (sectionTop < windowHeight * 0.8) {
+                section.style.opacity = '1';
+                section.style.transform = 'translateY(0)';
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', fadeInOnScroll);
+    fadeInOnScroll(); // Initial call to show sections in view on page load
 
-        function showContactPopup() {
-            document.getElementById('contact-popup').style.display = 'block';
-        }
+    // Show contact popup
+    function showContactPopup() {
+        const popup = document.getElementById('contact-popup');
+        popup.style.display = 'flex'; // Use flex to center the popup
+        setTimeout(() => popup.querySelector('.popup-content').classList.add('show'), 10);
+    }
 
-        function closeContactPopup() {
-            document.getElementById('contact-popup').style.display = 'none';
+    // Close contact popup
+    function closeContactPopup() {
+        const popup = document.getElementById('contact-popup');
+        popup.querySelector('.popup-content').classList.remove('show');
+        setTimeout(() => popup.style.display = 'none', 300); // Hide popup after animation
+    }
+
+    // Attach event listeners
+    document.querySelector('.floating-cta').addEventListener('click', showContactPopup);
+    document.querySelector('#contact-popup .close').addEventListener('click', closeContactPopup);
+
+    // Close popup if clicking outside of the content
+    document.getElementById('contact-popup').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeContactPopup();
         }
+    });
+});
+
     </script>
 </body>
 </html>
