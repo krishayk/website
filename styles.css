@@ -2,22 +2,16 @@
 body, h1, h2, p, ul, li, a {
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif; /* Nice, elegant font */
-    font-weight: bold; /* Make text bold */
-    transition: all 0.3s ease; /* Smooth transitions */
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.3s ease;
 }
 
 /* Header */
 header {
-    background: #007BFF; /* Placeholder color */
-    padding: 10px 0;
-    text-align: center; /* Centered content */
+    background: #007BFF;
+    padding: 20px 0;
+    text-align: center;
     color: white;
-}
-
-/* Hide navbar items */
-nav {
-    display: none;
 }
 
 .logo {
@@ -26,27 +20,112 @@ nav {
 
 /* Hero Section */
 #hero {
-    background: #f0f0f0; /* Placeholder background color */
+    background: #f0f0f0;
     color: black;
     text-align: center;
-    padding: 100px 0;
-    opacity: 0; /* Hidden by default */
-    transform: translateY(20px); /* Start position for animation */
-    transition: opacity 1s ease-in, transform 1s ease-in; /* Animation */
+    padding: 80px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in, transform 1s ease-in;
 }
 
-#hero h1, #hero p {
-    opacity: 1;
-    transform: translateY(0);
+.hero-content h1, .hero-content p {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero-image-placeholder {
+    width: 70%;
+    height: 300px;
+    background: #a9dfbf;
+    margin: 0 auto 30px;
+    border-radius: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #218838, #28a745);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Testimonials */
+#testimonials {
+    background: #d1f2eb;
+    padding: 50px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in, transform 1s ease-in;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0 auto 30px;
+    max-width: 600px;
+    transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-content {
+    padding: 20px;
+}
+
+/* Testimonials continued */
+.testimonial-content p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.testimonial-author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.testimonial-author p {
+    font-size: 1em;
+    color: #333;
 }
 
 /* Key Services Overview */
 #services-overview {
-    background: #f4f4f4;
+    background: #eafaf1;
     padding: 50px 0;
-    opacity: 0; /* Hidden by default */
-    transform: translateY(20px); /* Start position for animation */
-    transition: opacity 1s ease-in, transform 1s ease-in; /* Animation */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in, transform 1s ease-in;
 }
 
 .service {
@@ -57,181 +136,138 @@ nav {
 .service h2 {
     font-size: 1.8em;
     margin-bottom: 10px;
-    font-weight: normal;
+    color: #333;
 }
 
 .service p {
     font-size: 1.1em;
     color: #666;
-    font-weight: normal;
 }
 
-.btn {
-    display: inline-block;
-    padding: 12px 25px; /* Slightly larger button */
-    background: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
+.rectangle-placeholder {
+    width: 70%;
+    height: 200px;
+    background: #a9dfbf; /* Another shade of green */
+    margin: 0 auto 20px;
+    border-radius: 20px;
 }
 
-.btn:hover {
-    background: #0056b3;
-}
-
-.explore-all {
-    display: block;
-    margin: 20px auto;
-    font-weight: normal;
-}
-
-/* Testimonials */
-#testimonials {
-    background: #fff;
+/* Website Previews */
+.website-previews {
+    background: #b2d8d8; /* Same Soft Mint Green as Hero */
     padding: 50px 0;
-    opacity: 0; /* Hidden by default */
-    transform: translateY(20px); /* Start position for animation */
-    transition: opacity 1s ease-in, transform 1s ease-in; /* Animation */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in, transform 1s ease-in;
 }
 
-.testimonial {
+.preview {
+    margin-bottom: 20px;
     text-align: center;
-    margin-bottom: 30px;
 }
 
-.testimonial p {
-    font-size: 1.2em;
+.preview h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
     color: #333;
-    font-weight: normal;
 }
 
-.placeholder {
-    width: 100px;
-    height: 100px;
-    background: #ddd;
-    display: inline-block;
-    margin-top: 10px;
-    border-radius: 50%;
+.preview iframe {
+    width: 80%;
+    height: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 0 auto;
 }
 
 /* Footer */
 footer {
-    background: #f9f9f9;
+    background: #333;
+    color: white;
     padding: 20px 0;
     text-align: center;
 }
 
 .social-media .placeholder {
-    width: 120px;
-    height: 40px;
-    background: #ddd;
+    width: 50px;
+    height: 50px;
+    background: #555;
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 50%;
+}
+
+.quick-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.quick-links li {
+    margin: 0 10px;
+}
+
+.quick-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.quick-links a:hover {
+    text-decoration: underline;
 }
 
 /* Floating CTA Button */
 .floating-cta {
-    position: fixed;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
+    display: inline-block;
+    padding: 12px 24px;
     background: #007BFF;
     color: white;
-    padding: 22px 44px; /* Bigger button */
-    border-radius: 50px;
     text-decoration: none;
-    font-size: 1.7em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s ease, transform 0.3s ease;
-    text-align: center;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, box-shadow 0.3s;
 }
 
 .floating-cta:hover {
     background: #0056b3;
-    transform: translateX(-50%) scale(1.1); /* Slight zoom effect */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Popup */
+/* Contact Popup */
 .popup {
     display: none;
     position: fixed;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    display: flex; /* Centering method */
+    background: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
 }
 
 .popup-content {
     background: white;
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
-    width: 350px;
     text-align: center;
-    position: relative;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    opacity: 0; /* Hidden by default */
-    transform: scale(0.8); /* Start position for animation */
-    transition: opacity 0.3s ease-in, transform 0.3s ease-in; /* Animation */
+    transform: scale(0.8);
+    transition: transform 0.3s ease-in-out;
 }
 
 .popup-content.show {
-    opacity: 1;
-    transform: scale(1); /* Final position */
+    transform: scale(1);
 }
 
-.popup-content h2 {
-    margin-bottom: 20px;
-    font-size: 1.6em;
-    font-weight: normal;
-}
-
-.popup-content p {
-    margin-bottom: 15px;
-    font-size: 1.1em;
-    font-weight: normal;
-}
-
-.popup-content a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-.popup-content a:hover {
-    text-decoration: underline;
-}
-
-.close {
+.popup .close {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 1.7em;
+    font-size: 1.5em;
     cursor: pointer;
-}
-
-/* View Websites Section */
-#view-websites {
-    display: none;
-    margin: 20px auto; /* Center the preview */
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
-    max-height: 0; /* Hidden by default */
-    opacity: 0; /* Hidden by default */
-    overflow: hidden;
-}
-
-#view-websites.show {
-    max-height: 500px; /* Adjust height as needed */
-    opacity: 1;
-}
-
-/* Center Contact Us Button */
-.contact-us {
-    text-align: center;
-    margin: 30px 0; /* Space around the button */
 }
