@@ -1,185 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Consulting Agency</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tri-Valley Consulting</title>
+  <meta name="description" content="Tri-Valley Consulting—Professional, affordable solutions that deliver real growth." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="logo">Your Logo</div>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <div class="hero-image-placeholder"></div>
-            <h1>Transform Your Business with Expert Consulting</h1>
-            <p>Specializing in Websites, Marketing, and Growth Strategies</p>
-            <a href="#services-overview" class="btn">View our Services</a>
-        </div>
-    </section>
+  <!-- animated blobs -->
+  <div class="blob" style="--size:400px;--color:#A3D5FF;--x:-15vw;--y:-10vh;--delay:0s;"></div>
+  <div class="blob" style="--size:500px;--color:#FFCFDF;--x:60vw;--y:70vh;--delay:3s;"></div>
 
-    <!-- Testimonials -->
-    <section id="testimonials">
-        <div class="container">
-            <h2>What Our Clients Say</h2>
-            <div class="testimonial-card">
-                <div class="testimonial-content">
-                    <p>"Exceptional service and results. Highly recommended!"</p>
-                    <div class="testimonial-author">
-                        <img src="client1.jpg" alt="Client 1">
-                        <p>- Client 1</p>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-content">
-                    <p>"The team transformed our online presence and drove significant growth."</p>
-                    <div class="testimonial-author">
-                        <img src="client2.jpg" alt="Client 2">
-                        <p>- Client 2</p>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-content">
-                    <p>"Exceptional service and results. Highly recommended!"</p>
-                    <div class="testimonial-author">
-                        <img src="client1.jpg" alt="Client 1">
-                        <p>- Client 1</p>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-content">
-                    <p>"Exceptional service and results. Highly recommended!"</p>
-                    <div class="testimonial-author">
-                        <img src="client1.jpg" alt="Client 1">
-                        <p>- Client 1</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Key Services Overview -->
-    <section id="services-overview">
-        <div class="container">
-            <div class="service">
-                <div class="rectangle-placeholder"></div>
-                <h2>Website Design</h2>
-                <p>Creating visually stunning and functional websites to help your business thrive online.</p>
-                <a href="javascript:void(0);" class="btn" onclick="toggleWebsitePreview()">View Websites</a>
-            </div>
-            <div class="service">
-                <div class="rectangle-placeholder"></div>
-                <h2>Digital Marketing</h2>
-                <p>Implementing effective strategies to boost your online presence and drive growth.</p>
-            </div>
-            <div class="service">
-                <div class="rectangle-placeholder"></div>
-                <h2>Business Strategy</h2>
-                <p>Helping you develop and execute strategies to achieve your business goals.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Website Previews -->
-    <section id="view-websites" class="website-previews" style="display: none;">
-        <div class="container">
-            <div class="preview">
-                <h3>Apple.com</h3>
-                <iframe src="https://www.apple.com" frameborder="0"></iframe>
-            </div>
-            <div class="preview">
-                <h3>Gmail.com</h3>
-                <iframe src="https://mail.google.com" frameborder="0"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="social-media">
-                <div class="placeholder"></div>
-            </div>
-            <ul class="quick-links">
-                <li><a href="#privacy-policy">Privacy Policy</a></li>
-                <li><a href="#terms-of-service">Terms of Service</a></li>
-            </ul>
-        </div>
-    </footer>
-
-    <!-- Floating CTA Button -->
-    <a href="#contact" class="floating-cta" onclick="showContactPopup()">Contact Us</a>
-
-    <!-- Contact Popup -->
-    <div id="contact-popup" class="popup">
-        <div class="popup-content">
-            <span class="close" onclick="closeContactPopup()">&times;</span>
-            <h2>Contact Information</h2>
-            <p>Email: <a href="mailto:krishay.k.30@gmail.com">krishay.k.30@gmail.com</a></p>
-            <p>Phone: <a href="tel:+19258758136">925-875-8136</a></p>
-        </div>
+  <!-- HEADER -->
+  <header class="glass reveal">
+    <div class="container header-inner">
+      <div class="logo"><a href="index.html">Tri-Valley Consulting</a></div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
     </div>
+  </header>
 
-    <!-- JavaScript -->
-    <script>
-        function toggleWebsitePreview() {
-            const websiteSection = document.getElementById('view-websites');
-            const displayStyle = websiteSection.style.display;
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="reveal">
+      <div class="container hero-content">
+        <h1 class="hero-title">
+          Your Partner in<br>
+          <span class="highlight">Growth &amp; Innovation</span>
+        </h1>
+        <p class="tagline">Expert services, unbeatable value—your success, our mission.</p>
+        <a href="#services" class="btn-primary">Explore Services</a>
+      </div>
+    </section>
 
-            if (displayStyle === 'none' || displayStyle === '') {
-                websiteSection.style.display = 'block';
-            } else {
-                websiteSection.style.display = 'none';
-            }
+    <!-- SERVICES -->
+    <section id="services" class="reveal">
+      <div class="container">
+        <h2>What We Offer</h2>
+        <div class="services-grid">
+          <div class="card glass">
+            <div class="icon">🖥️</div>
+            <h3>Website Design</h3>
+            <p>Responsive, user-focused sites that convert.</p>
+          </div>
+          <div class="card glass">
+            <div class="icon">📈</div>
+            <h3>Digital Marketing</h3>
+            <p>Targeted campaigns to drive measurable growth.</p>
+          </div>
+          <div class="card glass">
+            <div class="icon">💡</div>
+            <h3>Business Strategy</h3>
+            <p>Actionable plans for long-term success.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="reveal">
+      <div class="container">
+        <h2>Hear From Our Clients</h2>
+        <div class="testimonials-grid">
+          <article class="testimonial glass">
+            <blockquote>
+              They doubled our conversion rate with stunning design.
+            </blockquote>
+            <div class="author-info">
+              <div class="avatar"></div>
+              <p class="author-name">— Alex R.</p>
+            </div>
+          </article>
+    
+          <article class="testimonial glass">
+            <blockquote>
+              Process was seamless, results were immediate.
+            </blockquote>
+            <div class="author-info">
+              <div class="avatar"></div>
+              <p class="author-name">— Morgan S.</p>
+            </div>
+          </article>
+    
+          <article class="testimonial glass">
+            <blockquote>
+              Affordable, professional, and highly effective.
+            </blockquote>
+            <div class="author-info">
+              <div class="avatar"></div>
+              <p class="author-name">— Jamie L.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT -->
+    <section id="contact" class="reveal">
+      <div class="container">
+        <h2>Get In Touch</h2>
+        <form id="contact-form" class="contact-form glass">
+          <label for="businessName">Business Name</label>
+          <input type="text" id="businessName" name="businessName" required />
+
+          <label for="yourName">Your Name</label>
+          <input type="text" id="yourName" name="yourName" required />
+
+          <label for="phoneNumber">Phone Number</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="contactMethod">Preferred Method of Contact</label>
+          <select id="contactMethod" name="contactMethod" required>
+            <option>Email</option>
+            <option>Phone</option>
+          </select>
+
+          <label for="service">Service You Want</label>
+          <select id="service" name="service" required>
+            <option>Website Design</option>
+            <option>Digital Marketing</option>
+            <option>Business Strategy</option>
+            <option>Other</option>
+          </select>
+
+          <div id="other-service-container" style="display:none;">
+            <label for="otherService">Please specify</label>
+            <input type="text" id="otherService" name="otherService" />
+          </div>
+
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer reveal">
+    <div class="container footer-content">
+      <div class="footer-logo"><a href="index.html">Tri-Valley Consulting</a></div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+      <p class="footer-copy">© 2025 Tri-Valley Consulting. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- THANK YOU POPUP -->
+  <div id="thankyou-popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <h3>Thank You!</h3>
+      <p>Your submission has been received. We’ll be in touch soon.</p>
+    </div>
+  </div>
+
+  <script>
+    // Scroll reveal
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
         }
+      });
+    }, { threshold: 0.2 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-        function showContactPopup() {
-            document.getElementById('contact-popup').style.display = 'flex';
-            setTimeout(() => document.getElementById('contact-popup').querySelector('.popup-content').classList.add('show'), 10);
-        }
+    // Mobile nav toggle
+    document.querySelector('.nav-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
 
-        function closeContactPopup() {
-            const popup = document.getElementById('contact-popup');
-            popup.querySelector('.popup-content').classList.remove('show');
-            setTimeout(() => popup.style.display = 'none', 300);
-        }
+    // Show/hide "Other" field
+    document.getElementById('service').addEventListener('change', e => {
+      document.getElementById('other-service-container').style.display =
+        e.target.value === 'Other' ? 'block' : 'none';
+    });
 
-        document.addEventListener('DOMContentLoaded', function() {
-            function fadeInOnScroll() {
-                const sections = document.querySelectorAll('#hero, #services-overview, #testimonials');
-                const windowHeight = window.innerHeight;
-                
-                sections.forEach(section => {
-                    const sectionTop = section.getBoundingClientRect().top;
-                    
-                    if (sectionTop < windowHeight * 0.8) {
-                        section.style.opacity = '1';
-                        section.style.transform = 'translateY(0)';
-                    }
-                });
-            }
-            
-            window.addEventListener('scroll', fadeInOnScroll);
-            fadeInOnScroll();
+    // Form submission
+    const SHEET_ENDPOINT_URL =
+      'https://script.google.com/macros/s/AKfycbxRzIoHGyCvGb9jX8fl4YKA-Bp24dYCh0eVYl8SdbD1HJ8I4iS3rfhjCTkpUAmhaZvS/exec';
 
-            document.querySelector('.floating-cta').addEventListener('click', showContactPopup);
-            document.querySelector('#contact-popup .close').addEventListener('click', closeContactPopup);
-            document.getElementById('contact-popup').addEventListener('click', function(e) {
-                if (e.target === this) {
-                    closeContactPopup();
-                }
-            });
+    document.getElementById('contact-form').addEventListener('submit', async e => {
+      e.preventDefault();
+      const f = e.target;
+      const payload = {
+        businessName:  f.businessName.value,
+        yourName:      f.yourName.value,
+        phoneNumber:   f.phoneNumber.value,
+        email:         f.email.value,
+        contactMethod: f.contactMethod.value,
+        service:       f.service.value,
+        otherService:  f.otherService.value
+      };
+      try {
+        const res  = await fetch(SHEET_ENDPOINT_URL, {
+          method: 'POST',
+          body: JSON.stringify(payload)
         });
-    </script>
+        const json = await res.json();
+        if (json.result === 'success') {
+          f.reset();
+          document.getElementById('other-service-container').style.display = 'none';
+          document.getElementById('thankyou-popup').classList.add('show');
+        }
+      } catch (err) {
+        console.error(err);
+      }
+    });
+
+    // Close popup
+    document.querySelector('#thankyou-popup .close-btn').addEventListener('click', () => {
+      document.getElementById('thankyou-popup').classList.remove('show');
+    });
+  </script>
 </body>
 </html>
