@@ -450,3 +450,30 @@ footer.footer {
     font-size: clamp(1.25rem, 4vw, 1.75rem);
   }
 }
+
+.nav-toggle {
+  display: none; /* hide by default */
+}
+
+/* Mobile menu behavior */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block; /* show hamburger icon on small screens */
+  }
+
+  .nav-links {
+    display: none; /* hide links by default */
+    flex-direction: column;
+    background: var(--white);
+    position: absolute;
+    top: var(--header-height);
+    right: 1rem;
+    padding: 1rem;
+    border-radius: var(--radius);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex; /* show links when nav-toggle is clicked */
+  }
+}
