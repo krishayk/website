@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
   <title>Tri-Valley Consulting</title>
   <meta name="description" content="Tri-Valley Consulting—Professional, affordable solutions that deliver real growth." />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/website/styles.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
@@ -48,11 +49,15 @@
       <div class="container">
         <h2>What We Offer</h2>
         <div class="services-grid">
-          <div class="card glass">
+
+          <!-- Updated Website Design card -->
+          <div class="card glass website-design">
             <div class="icon">🖥️</div>
             <h3>Website Design</h3>
             <p>Responsive, user-focused sites that convert.</p>
+            <button class="btn-secondary preview-btn">View Our Work</button>
           </div>
+
           <div class="card glass">
             <div class="icon">📈</div>
             <h3>Digital Marketing</h3>
@@ -81,7 +86,6 @@
               <p class="author-name">— Alex R.</p>
             </div>
           </article>
-    
           <article class="testimonial glass">
             <blockquote>
               Process was seamless, results were immediate.
@@ -91,7 +95,6 @@
               <p class="author-name">— Morgan S.</p>
             </div>
           </article>
-    
           <article class="testimonial glass">
             <blockquote>
               Affordable, professional, and highly effective.
@@ -104,6 +107,7 @@
         </div>
       </div>
     </section>
+
     <!-- CONTACT -->
     <section id="contact" class="reveal">
       <div class="container">
@@ -111,22 +115,17 @@
         <form id="contact-form" class="contact-form glass">
           <label for="businessName">Business Name</label>
           <input type="text" id="businessName" name="businessName" required />
-
           <label for="yourName">Your Name</label>
           <input type="text" id="yourName" name="yourName" required />
-
           <label for="phoneNumber">Phone Number</label>
           <input type="tel" id="phoneNumber" name="phoneNumber" required />
-
           <label for="email">Email</label>
           <input type="email" id="email" name="email" required />
-
           <label for="contactMethod">Preferred Method of Contact</label>
           <select id="contactMethod" name="contactMethod" required>
             <option>Email</option>
             <option>Phone</option>
           </select>
-
           <label for="service">Service You Want</label>
           <select id="service" name="service" required>
             <option>Website Design</option>
@@ -134,12 +133,10 @@
             <option>Business Strategy</option>
             <option>Other</option>
           </select>
-
           <div id="other-service-container" style="display:none;">
             <label for="otherService">Please specify</label>
             <input type="text" id="otherService" name="otherService" />
           </div>
-
           <button type="submit" class="btn-primary">Send Message</button>
         </form>
       </div>
@@ -164,6 +161,24 @@
       <span class="close-btn">&times;</span>
       <h3>Thank You!</h3>
       <p>Your submission has been received. We’ll be in touch soon.</p>
+    </div>
+  </div>
+
+  <!-- Preview Modal -->
+  <div id="preview-modal" class="modal">
+    <div class="modal-content glass">
+      <span class="close-modal">&times;</span>
+      <h3>Live Site Previews</h3>
+      <div class="iframe-container">
+        <div class="iframe-wrapper">
+          <h4>Johnny’s Donut</h4>
+          <iframe src="https://www.johnnysdonut.com/" frameborder="0"></iframe>
+        </div>
+        <div class="iframe-wrapper">
+          <h4>Downtown Café Pleasanton</h4>
+          <iframe src="https://www.downtowncafepleasanton.net/" frameborder="0"></iframe>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -222,9 +237,20 @@
       }
     });
 
-    // Close popup
+    // Close thank-you popup
     document.querySelector('#thankyou-popup .close-btn').addEventListener('click', () => {
       document.getElementById('thankyou-popup').classList.remove('show');
+    });
+
+    // Live preview modal toggle
+    const previewBtn  = document.querySelector('.preview-btn');
+    const previewModal = document.getElementById('preview-modal');
+    const closeModal   = previewModal.querySelector('.close-modal');
+
+    previewBtn.addEventListener('click', () => previewModal.classList.add('show'));
+    closeModal.addEventListener('click', () => previewModal.classList.remove('show'));
+    window.addEventListener('click', e => {
+      if (e.target === previewModal) previewModal.classList.remove('show');
     });
   </script>
 </body>
