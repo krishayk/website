@@ -7,7 +7,7 @@
   <title>Tri-Valley Consulting</title>
   <meta name="description" content="Tri-Valley Consulting—Professional, affordable solutions that deliver real growth." />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/website/styles.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
@@ -22,6 +22,7 @@
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#contact">Contact Us</a></li>
@@ -78,30 +79,30 @@
         <h2>Hear From Our Clients</h2>
         <div class="testimonials-grid">
           <article class="testimonial glass">
-            <blockquote>
-              They doubled our conversion rate with stunning design.
+            <blockquote style="position: relative; padding-left: 2.5rem;">
+              <span style="position: absolute; left: 0; top: 0; font-size: 2.5rem; color: #A3D5FF; font-family: serif;">“</span>
+              Our website now perfectly captures the warmth and quality of our donuts. The design is exactly what we wanted.
             </blockquote>
             <div class="author-info">
-              <div class="avatar"></div>
-              <p class="author-name">— Alex R.</p>
+              <p class="author-name" style="margin-left: 0.5rem; color: #3498db; font-weight: 600;">— Keo I., Johnny's Donut</p>
             </div>
           </article>
           <article class="testimonial glass">
-            <blockquote>
-              Process was seamless, results were immediate.
+            <blockquote style="position: relative; padding-left: 2.5rem;">
+              <span style="position: absolute; left: 0; top: 0; font-size: 2.5rem; color: #A3D5FF; font-family: serif;">“</span>
+              The new site has increased our online orders significantly. Professional work that exceeded our expectations.
             </blockquote>
             <div class="author-info">
-              <div class="avatar"></div>
-              <p class="author-name">— Morgan S.</p>
+              <p class="author-name" style="margin-left: 0.5rem; color: #3498db; font-weight: 600;">— Claudia M., Downtown Cafe</p>
             </div>
           </article>
           <article class="testimonial glass">
-            <blockquote>
-              Affordable, professional, and highly effective.
+            <blockquote style="position: relative; padding-left: 2.5rem;">
+              <span style="position: absolute; left: 0; top: 0; font-size: 2.5rem; color: #A3D5FF; font-family: serif;">“</span>
+              Fast, reliable service with beautiful results. Our customers love the new website experience.
             </blockquote>
             <div class="author-info">
-              <div class="avatar"></div>
-              <p class="author-name">— Jamie L.</p>
+              <p class="author-name" style="margin-left: 0.5rem; color: #3498db; font-weight: 600;">— Alejandro J., Rosy's Cafe</p>
             </div>
           </article>
         </div>
@@ -111,8 +112,10 @@
     <!-- CONTACT -->
     <section id="contact" class="reveal">
       <div class="container">
-        <h2>Get In Touch</h2>
-        <form id="contact-form" class="contact-form glass">
+        <h2>Get a Quote</h2>
+        <p style="text-align:center; color:#3498db; font-size:1.2rem; margin-bottom:0; margin-top:-2.2rem;">With prices as low as $50!</p>
+        <div style="height: 1.2rem;"></div>
+        <form id="contact-form" class="contact-form glass" style="margin-top: 1.2rem;">
           <label for="businessName">Business Name</label>
           <input type="text" id="businessName" name="businessName" required />
           <label for="yourName">Your Name</label>
@@ -166,19 +169,24 @@
 
   <!-- Preview Modal -->
   <div id="preview-modal" class="modal">
-    <div class="modal-content glass">
+    <div class="modal-content glass" style="max-width: 1300px;">
       <span class="close-modal">&times;</span>
-      <h3>Live Site Previews</h3>
-      <div class="iframe-container">
-        <div class="iframe-wrapper">
-          <h4>Johnny’s Donut</h4>
-          <iframe src="https://www.johnnysdonut.com/" frameborder="0"></iframe>
+      <h3 style="color: #3498db; text-align: center;">Live Site Previews</h3>
+      <div class="iframe-container" style="display: flex; justify-content: center; gap: 1rem; align-items: flex-start; flex-wrap: nowrap;">
+        <div class="iframe-wrapper" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+          <h4 style="color: #3498db;">Johnny's Donut</h4>
+          <a href="https://www.johnnysdonut.com/" target="_blank" rel="noopener">
+            <img src="images/johnnysdonuts.png" alt="Johnny's Donut Screenshot" style="width: 500px; max-width: 48vw; border-radius: 32px; box-shadow: 0 4px 32px rgba(0,0,0,0.12); margin-bottom: 0.5rem; cursor: pointer; display: block; vertical-align: middle;" />
+          </a>
         </div>
-        <div class="iframe-wrapper">
-          <h4>Downtown Café Pleasanton</h4>
-          <iframe src="https://www.downtowncafepleasanton.net/" frameborder="0"></iframe>
+        <div class="iframe-wrapper" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+          <h4 style="color: #3498db;">Downtown Cafe</h4>
+          <a href="https://www.downtowncafepleasanton.net/" target="_blank" rel="noopener">
+            <img src="images/downtowncafe.png" alt="Downtown Cafe Screenshot" style="width: 500px; max-width: 48vw; border-radius: 32px; box-shadow: 0 4px 32px rgba(0,0,0,0.12); margin-bottom: 0.5rem; cursor: pointer; display: block; vertical-align: middle;" />
+          </a>
         </div>
       </div>
+      <div style="text-align: center; margin-top: 1rem; color: #888; font-size: 1.2rem;">and more...</div>
     </div>
   </div>
 
