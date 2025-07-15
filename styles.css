@@ -196,11 +196,16 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
   gap: 2.5rem;
+  justify-content: center;
 }
 .services-grid .card {
   padding: 2.5rem 1.5rem;
   text-align: center;
   transition: transform .3s ease, box-shadow .3s ease;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .services-grid .card:hover {
   transform: translateY(-8px);
@@ -218,6 +223,28 @@ header {
 .services-grid .card p {
   color: #555;
   line-height: 1.5;
+}
+.services-grid .card.ai-support {
+  min-width: 220px;
+  max-width: 320px;
+}
+/* Center last two cards in a 3-column grid when there are 5 cards */
+@media (min-width: 900px) {
+  .services-grid > .card:nth-child(4) {
+    grid-column: 2 / 3;
+  }
+  .services-grid > .card:nth-child(5) {
+    grid-column: 3 / 4;
+  }
+}
+@media (min-width: 900px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .services-grid > .card:nth-last-child(-n+2) {
+    grid-column: span 1;
+    justify-self: center;
+  }
 }
 
 /* Testimonials */
@@ -692,4 +719,57 @@ footer.footer {
   background: var(--accent-dark);
   color: #fff;
   transform: translateY(-2px);
+}
+
+/* Service Modals */
+.service-modal-content {
+  border-top: 8px solid #4A90E2;
+  box-shadow: 0 12px 48px rgba(80,120,180,0.13);
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 28px;
+  max-width: 700px;
+  width: 95vw;
+  margin: 0 auto;
+  background: var(--white);
+  position: relative;
+}
+#website-modal .service-title { color: #4A90E2; }
+#website-modal .service-modal-content { border-top-color: #4A90E2; }
+#marketing-modal .service-title { color: #27ae60; }
+#marketing-modal .service-modal-content { border-top-color: #27ae60; }
+#strategy-modal .service-title { color: #e67e22; }
+#strategy-modal .service-modal-content { border-top-color: #e67e22; }
+.service-section h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.18rem;
+  color: var(--accent-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.service-section ul {
+  margin-bottom: 1rem;
+  margin-left: 1.2rem;
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.service-price {
+  font-size: 1rem;
+  color: #888;
+  font-weight: 500;
+  margin-left: 1rem;
+}
+@media (max-width: 600px) {
+  .service-modal-content {
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+    border-radius: 18px;
+  }
+  .service-section h4 {
+    font-size: 1rem;
+  }
+  .service-section ul {
+    font-size: 0.95rem;
+  }
 }

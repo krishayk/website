@@ -24,6 +24,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="#services">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#contact">Contact Us</a></li>
         </ul>
@@ -56,55 +57,129 @@
             <div class="icon">🖥️</div>
             <h3>Website Design</h3>
             <p>Responsive, user-focused sites that convert.</p>
-            <button class="btn-secondary preview-btn">View Our Work</button>
+            <button class="btn-secondary service-btn" data-modal="website-modal">Services</button>
           </div>
 
           <div class="card glass">
             <div class="icon">📈</div>
             <h3>Digital Marketing</h3>
             <p>Targeted campaigns to drive measurable growth.</p>
+            <button class="btn-secondary service-btn" data-modal="marketing-modal">Services</button>
           </div>
           <div class="card glass">
             <div class="icon">💡</div>
-            <h3>Business Strategy</h3>
+            <h3>Growth Strategy</h3>
             <p>Actionable plans for long-term success.</p>
+            <button class="btn-secondary service-btn" data-modal="strategy-modal">Services</button>
+          </div>
+          <div class="card glass">
+            <div class="icon">⚙️</div>
+            <h3>Operations Consulting</h3>
+            <p>Streamlining workflows, improving efficiency, reducing costs.</p>
+            <button class="btn-secondary service-btn" data-modal="operations-modal">Services</button>
+          </div>
+          <div class="card glass ai-support">
+            <div class="icon">🤖</div>
+            <h3>AI-based Customer Support</h3>
+            <p>Smart, automated customer service for your business.</p>
+            <button class="btn-secondary service-btn" data-modal="ai-modal">Services</button>
           </div>
         </div>
       </div>
     </section>
 
     <!-- TESTIMONIALS -->
-    <section id="testimonials" class="reveal">
-      <div class="container">
-        <h2>Hear From Our Clients</h2>
-        <div class="testimonials-grid">
-          <article class="testimonial glass">
-            <blockquote style="position: relative; padding-left: 2.5rem;">
-              <span style="position: absolute; left: 0; top: 0; font-size: 2.5rem; color: #A3D5FF; font-family: serif;">“</span>
-              Our website now perfectly captures the warmth and quality of our donuts. The design is exactly what we wanted.
-            </blockquote>
-            <div class="author-info">
-              <p class="author-name" style="margin-left: 0.5rem; color: #3498db; font-weight: 600;">— Keo I., Johnny's Donut</p>
+    <section id="testimonials" class="reveal" style="background: #f6faff; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
+      <div class="container" style="max-width: 100vw;">
+        <h2 style="text-align:center; color: var(--accent-dark); font-size:2.5rem; font-weight:700; margin-bottom:2.5rem;">Hear From Our Clients</h2>
+        <div class="testimonial-carousel" style="background: #f6faff; width: 100vw; overflow: hidden;">
+          <div class="carousel-track">
+            <div class="testimonial-content">
+              <div class="stars">★★★★★</div>
+              <blockquote>Our website now perfectly captures the warmth and quality of our donuts. The design is exactly what we wanted.</blockquote>
+              <div class="author-info">
+                <p class="author-name">— Keo I., Johnny's Donut</p>
+              </div>
             </div>
-          </article>
-          <article class="testimonial glass">
-            <blockquote style="position: relative; padding-left: 2.5rem;">
-              <span style="position: absolute; left: 0; top: 0; font-size: 2.5rem; color: #A3D5FF; font-family: serif;">“</span>
-              The new site has increased our online orders significantly. Professional work that exceeded our expectations.
-            </blockquote>
-            <div class="author-info">
-              <p class="author-name" style="margin-left: 0.5rem; color: #3498db; font-weight: 600;">— Claudia M., Downtown Cafe</p>
+            <div class="testimonial-content">
+              <div class="stars">★★★★★</div>
+              <blockquote>The new site has increased our online orders significantly. Professional work that exceeded our expectations.</blockquote>
+              <div class="author-info">
+                <p class="author-name">— Claudia M., Downtown Cafe</p>
+              </div>
             </div>
-          </article>
-          <article class="testimonial glass">
-            <blockquote style="position: relative; padding-left: 2.5rem;">
-              <span style="position: absolute; left: 0; top: 0; font-size: 2.5rem; color: #A3D5FF; font-family: serif;">“</span>
-              Fast, reliable service with beautiful results. Our customers love the new website experience.
-            </blockquote>
-            <div class="author-info">
-              <p class="author-name" style="margin-left: 0.5rem; color: #3498db; font-weight: 600;">— Alejandro J., Rosy's Cafe</p>
+            <div class="testimonial-content">
+              <div class="stars">★★★★★</div>
+              <blockquote>Fast, reliable service with beautiful results. Our customers love the new website experience.</blockquote>
+              <div class="author-info">
+                <p class="author-name">— Alejandro J., Rosy's Cafe</p>
+              </div>
             </div>
-          </article>
+            <div class="testimonial-content">
+              <div class="stars">★★★★★</div>
+              <blockquote>Krishay and the team were so easy to work with. They made the process simple and stress-free!</blockquote>
+              <div class="author-info">
+                <p class="author-name">— Priya S., Local Boutique</p>
+              </div>
+            </div>
+            <div class="testimonial-content">
+              <div class="stars">★★★★★</div>
+              <blockquote>We saw a huge boost in our social media engagement after working with Tri-Valley Consulting.</blockquote>
+              <div class="author-info">
+                <p class="author-name">— Mike D., Fitness Studio</p>
+              </div>
+            </div>
+            <div class="testimonial-content">
+              <div class="stars">★★★★★</div>
+              <blockquote>Super responsive and creative! Highly recommend for any business looking to grow online.</blockquote>
+              <div class="author-info">
+                <p class="author-name">— Sarah L., Florist</p>
+              </div>
+            </div>
+            <!-- Duplicate for seamless loop -->
+            <div class="testimonial-content">
+              <div class="stars">★★★★★</div>
+              <blockquote>Our website now perfectly captures the warmth and quality of our donuts. The design is exactly what we wanted.</blockquote>
+              <div class="author-info">
+                <p class="author-name">— Keo I., Johnny's Donut</p>
+              </div>
+            </div>
+            <div class="testimonial-content">
+              <div class="stars">★★★★★</div>
+              <blockquote>The new site has increased our online orders significantly. Professional work that exceeded our expectations.</blockquote>
+              <div class="author-info">
+                <p class="author-name">— Claudia M., Downtown Cafe</p>
+              </div>
+            </div>
+            <div class="testimonial-content">
+              <div class="stars">★★★★★</div>
+              <blockquote>Fast, reliable service with beautiful results. Our customers love the new website experience.</blockquote>
+              <div class="author-info">
+                <p class="author-name">— Alejandro J., Rosy's Cafe</p>
+              </div>
+            </div>
+            <div class="testimonial-content">
+              <div class="stars">★★★★★</div>
+              <blockquote>Krishay and the team were so easy to work with. They made the process simple and stress-free!</blockquote>
+              <div class="author-info">
+                <p class="author-name">— Priya S., Local Boutique</p>
+              </div>
+            </div>
+            <div class="testimonial-content">
+              <div class="stars">★★★★★</div>
+              <blockquote>We saw a huge boost in our social media engagement after working with Tri-Valley Consulting.</blockquote>
+              <div class="author-info">
+                <p class="author-name">— Mike D., Fitness Studio</p>
+              </div>
+            </div>
+            <div class="testimonial-content">
+              <div class="stars">★★★★★</div>
+              <blockquote>Super responsive and creative! Highly recommend for any business looking to grow online.</blockquote>
+              <div class="author-info">
+                <p class="author-name">— Sarah L., Florist</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -112,10 +187,9 @@
     <!-- CONTACT -->
     <section id="contact" class="reveal">
       <div class="container">
-        <h2>Get a Quote</h2>
-        <p style="text-align:center; color:#3498db; font-size:1.2rem; margin-bottom:0; margin-top:-2.2rem;">With prices as low as $75!</p>
-        <div style="height: 1.2rem;"></div>
-        <form id="contact-form" class="contact-form glass" style="margin-top: 1.2rem;">
+        <h2 style="text-align:center; color:#4A90E2; font-size:2.2rem; font-weight:700; margin-bottom:0.5rem;">Get a Quote</h2>
+        <p style="text-align:center; color:#555; font-size:1.15rem; margin-bottom:2.2rem;">Let's talk about your business goals! Fill out the form and we'll get back to you soon.</p>
+        <form id="contact-form" class="contact-form glass modern-contact-form" style="margin-top: 1.2rem;">
           <label for="businessName">Business Name</label>
           <input type="text" id="businessName" name="businessName" required />
           <label for="yourName">Your Name</label>
@@ -140,7 +214,14 @@
             <label for="otherService">Please specify</label>
             <input type="text" id="otherService" name="otherService" />
           </div>
-          <button type="submit" class="btn-primary">Send Message</button>
+          <label for="package" style="font-weight:600; color:#4A90E2; margin-top:0.7rem;">Package?</label>
+          <select id="package" name="package" required style="margin-bottom: 0.7rem;">
+            <option value="Essentials">Essentials</option>
+            <option value="Plus">Plus</option>
+            <option value="Pro">Pro</option>
+            <option value="Not Sure">Not Sure</option>
+          </select>
+          <button type="submit" class="btn-primary modern-contact-btn">Send Message</button>
         </form>
       </div>
     </section>
@@ -190,76 +271,600 @@
     </div>
   </div>
 
+  <!-- Service Modals -->
+  <div id="website-modal" class="modal">
+    <div class="modal-content glass service-modal-content" style="max-width: 700px;">
+      <span class="close-modal">&times;</span>
+      <h3 class="service-title" style="color: #4A90E2; text-align: center;">Website Design Packages</h3>
+      <div class="service-section">
+        <h4>Essentials Website</h4>
+        <ul>
+          <li>Choose from template</li>
+          <li>1 - 2 Pages</li>
+          <li>No Custom Domain</li>
+        </ul>
+        <div class="popup-plus-outline popup-plus-outline-blue">
+          <div class="popup-plus-label">Recommended</div>
+          <h4>Plus Website</h4>
+          <ul>
+            <li>Customize template aspects</li>
+            <li>Custom Domain Management</li>
+            <li>Light SEO work</li>
+          </ul>
+        </div>
+        <h4>Pro Website</h4>
+        <ul>
+          <li>Fully Custom Website</li>
+          <li>Custom Domain Management</li>
+          <li>Fully Optimized SEO</li>
+          <li>Custom Additional Features</li>
+          <li>Optional Check-in</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="marketing-modal" class="modal">
+    <div class="modal-content glass service-modal-content" style="max-width: 700px;">
+      <span class="close-modal">&times;</span>
+      <h3 class="service-title" style="color: #27ae60; text-align: center;">Digital Marketing Packages</h3>
+      <div class="service-section">
+        <h4>Essentials Package</h4>
+        <ul>
+          <li>8 posts per month (2/week)</li>
+          <li>1 platform (Instagram/Facebook)</li>
+          <li>Branded Graphics/Captions</li>
+          <li>1 Revision Per Post</li>
+        </ul>
+        <div class="popup-plus-outline popup-plus-outline-green">
+          <div class="popup-plus-label">Recommended</div>
+          <h4>Plus Package</h4>
+          <ul>
+            <li>16 posts per month (4/week) on each platform</li>
+            <li>2 Platforms</li>
+            <li>Branded Graphics and light videos</li>
+            <li>Monthly Content Calendar</li>
+            <li>Hashtag Research</li>
+            <li>Monthly Performance Summary</li>
+          </ul>
+        </div>
+        <h4>Pro Package</h4>
+        <ul>
+          <li>24 posts per month (6/week)</li>
+          <li>Up to 3 platforms</li>
+          <li>4 reels per month</li>
+          <li>Comment/DM Monitoring</li>
+          <li>Strategy Call every month</li>
+          <li>Detailed Monthly performance Report</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="strategy-modal" class="modal">
+    <div class="modal-content glass service-modal-content" style="max-width: 700px;">
+      <span class="close-modal">&times;</span>
+      <h3 class="service-title" style="color: #e67e22; text-align: center;">Business Strategy Packages</h3>
+      <div class="service-section">
+        <h4>Essentials Report</h4>
+        <ul>
+          <li>Research on 3 competitors</li>
+          <li>Short Summary (Services, Prices, Strengths/Weaknesses)</li>
+        </ul>
+        <div class="popup-plus-outline popup-plus-outline-orange">
+          <div class="popup-plus-label">Recommended</div>
+          <h4>Plus Report</h4>
+          <ul>
+            <li>Deep Dive on 4 Competitors</li>
+            <li>Comparison Table</li>
+            <li>Strategic Recommendations (Pricing, Offers, Content)</li>
+          </ul>
+        </div>
+        <h4>Pro Report</h4>
+        <ul>
+          <li>Deep Dive on 5 competitors</li>
+          <li>Branding & marketing Analysis</li>
+          <li>Visual Summary Slide Deck (Canva or PDF)</li>
+          <li>30 minute strategy call to discuss positioning and next steps</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="operations-modal" class="modal">
+    <div class="modal-content glass service-modal-content" style="max-width: 700px;">
+      <span class="close-modal">&times;</span>
+      <h3 class="service-title" style="color: #e67e22; text-align: center;">Operations Consulting Packages</h3>
+      <div class="service-section">
+        <h4>Essentials</h4>
+        <ul>
+          <li>Process review & basic workflow mapping</li>
+          <li>Quick-win recommendations</li>
+          <li>Email support for 2 weeks</li>
+        </ul>
+        <div class="popup-plus-outline popup-plus-outline-orange">
+          <div class="popup-plus-label">Recommended</div>
+          <h4>Plus</h4>
+          <ul>
+            <li>In-depth workflow analysis</li>
+            <li>Custom process optimization plan</li>
+            <li>Staff training session (virtual)</li>
+            <li>Email & phone support for 1 month</li>
+          </ul>
+        </div>
+        <h4>Pro</h4>
+        <ul>
+          <li>Full operations audit</li>
+          <li>Implementation support for new processes</li>
+          <li>On-site or virtual workshops</li>
+          <li>Ongoing support for 3 months</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="ai-modal" class="modal">
+    <div class="modal-content glass service-modal-content" style="max-width: 700px;">
+      <span class="close-modal">&times;</span>
+      <h3 class="service-title" style="color: #4A90E2; text-align: center;">AI-based Customer Support Packages</h3>
+      <div class="service-section">
+        <h4>Essentials</h4>
+        <ul>
+          <li>Basic AI chatbot setup for FAQs</li>
+          <li>Email integration</li>
+          <li>Monthly performance report</li>
+        </ul>
+        <div class="popup-plus-outline popup-plus-outline-blue">
+          <div class="popup-plus-label">Recommended</div>
+          <h4>Plus</h4>
+          <ul>
+            <li>Custom AI chatbot with branding</li>
+            <li>Live chat handoff to staff</li>
+            <li>Multi-channel support (web, Facebook, etc.)</li>
+            <li>Weekly performance analytics</li>
+          </ul>
+        </div>
+        <h4>Pro</h4>
+        <ul>
+          <li>Advanced AI with natural language understanding</li>
+          <li>CRM and ticketing system integration</li>
+          <li>Custom automations (e.g., order status, appointment booking)</li>
+          <li>Dedicated support & optimization</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .rec-badge {
+      display: inline-block;
+      background: #4A90E2;
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 0.3rem 1.1rem;
+      border-radius: 50px;
+      margin-left: 0.7rem;
+      letter-spacing: 0.5px;
+      vertical-align: middle;
+    }
+    /* Carousel continuous animation */
+    .testimonial-carousel {
+      overflow: hidden;
+      position: relative;
+      width: 100vw;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      background: #f6faff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 320px;
+    }
+    .carousel-track {
+      display: flex;
+      width: 4200px;
+      animation: slide-carousel 32s linear infinite;
+    }
+    @keyframes slide-carousel {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-2100px); }
+    }
+    .testimonial-content {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+      padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+      min-width: 420px;
+      max-width: 420px;
+      margin: 0 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      opacity: 1;
+      transition: opacity 0.4s;
+    }
+    .stars {
+      color: #FFD700;
+      font-size: 1.5rem;
+      margin-bottom: 0.7rem;
+      letter-spacing: 0.15rem;
+    }
+    @media (max-width: 1200px) {
+      .carousel-track {
+        width: 2800px;
+      }
+      .testimonial-content {
+        min-width: 320px;
+        max-width: 320px;
+      }
+    }
+    @media (max-width: 700px) {
+      .carousel-track {
+        width: 1920px;
+      }
+      .testimonial-content {
+        min-width: 260px;
+        max-width: 260px;
+        padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+      }
+    }
+    /* Modal recommended badge improvement */
+    .rec-badge {
+      display: inline-block;
+      background: linear-gradient(90deg, #4A90E2 60%, #6fc3ff 100%);
+      color: #fff;
+      font-size: 1.05rem;
+      font-weight: 700;
+      padding: 0.45rem 1.5rem;
+      border-radius: 50px;
+      margin-left: 1.2rem;
+      letter-spacing: 0.5px;
+      vertical-align: middle;
+      box-shadow: 0 2px 12px rgba(80,120,180,0.10);
+      border: none;
+      position: relative;
+      top: -2px;
+    }
+    .service-modal-content h4 {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.5rem;
+    }
+    .service-modal-content h4 .rec-badge {
+      margin-left: 1.2rem;
+      font-size: 1.05rem;
+      padding: 0.45rem 1.5rem;
+      background: linear-gradient(90deg, #4A90E2 60%, #6fc3ff 100%);
+    }
+    #marketing-modal .service-modal-content h4 .rec-badge {
+      background: linear-gradient(90deg, #27ae60 60%, #6fd6a7 100%);
+    }
+    #strategy-modal .service-modal-content h4 .rec-badge {
+      background: linear-gradient(90deg, #e67e22 60%, #ffb366 100%);
+    }
+    #operations-modal .service-modal-content h4 .rec-badge {
+      background: linear-gradient(90deg, #e67e22 60%, #ffb366 100%);
+    }
+    #ai-modal .service-modal-content h4 .rec-badge {
+      background: linear-gradient(90deg, #4A90E2 60%, #6fc3ff 100%);
+    }
+    .popup-rec-badge {
+      display: block;
+      margin: 0 auto 0.5rem auto;
+      margin-top: 2.2rem;
+      margin-bottom: -0.7rem;
+      width: fit-content;
+      padding: 0.5rem 1.7rem;
+      font-size: 1.08rem;
+      font-weight: 700;
+      border-radius: 50px;
+      box-shadow: 0 2px 12px rgba(80,120,180,0.10);
+      color: #fff;
+      letter-spacing: 0.5px;
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      background: linear-gradient(90deg, #4A90E2 60%, #6fc3ff 100%);
+    }
+    .popup-rec-badge-green {
+      background: linear-gradient(90deg, #27ae60 60%, #6fd6a7 100%);
+    }
+    .popup-rec-badge-orange {
+      background: linear-gradient(90deg, #e67e22 60%, #ffb366 100%);
+    }
+    .popup-rec-badge-outline {
+      display: block;
+      margin: 0 auto 0.5rem auto;
+      margin-top: 2.2rem;
+      margin-bottom: -0.7rem;
+      width: fit-content;
+      padding: 0.5rem 1.7rem;
+      font-size: 1.08rem;
+      font-weight: 700;
+      border-radius: 50px;
+      box-shadow: 0 2px 12px rgba(80,120,180,0.10);
+      color: #4A90E2;
+      letter-spacing: 0.5px;
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      background: #fff;
+      border: 2.5px solid #4A90E2;
+    }
+    .popup-rec-badge-green {
+      color: #27ae60;
+      border-color: #27ae60;
+    }
+    .popup-rec-badge-orange {
+      color: #e67e22;
+      border-color: #e67e22;
+    }
+    .modern-contact-form {
+      border-radius: 32px;
+      box-shadow: 0 8px 32px rgba(80,120,180,0.10);
+      padding: 3rem 2.5rem 2.5rem 2.5rem;
+      background: #fff;
+      max-width: 520px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .modern-contact-form label {
+      font-weight: 600;
+      color: #4A90E2;
+      margin-bottom: 0.2rem;
+    }
+    .modern-contact-form input,
+    .modern-contact-form textarea,
+    .modern-contact-form select {
+      width: 100%;
+      padding: 1rem;
+      border: 1.5px solid #eaf4ff;
+      border-radius: 16px;
+      background: #f6faff;
+      font-size: 1.08rem;
+      transition: border-color 0.2s, background 0.2s;
+      margin-bottom: 0.2rem;
+    }
+    .modern-contact-form input:focus,
+    .modern-contact-form textarea:focus,
+    .modern-contact-form select:focus {
+      outline: none;
+      border-color: #4A90E2;
+      background: #fff;
+    }
+    .modern-contact-btn {
+      margin-top: 1.5rem;
+      align-self: center;
+      padding: 1.1rem 2.5rem;
+      border: none;
+      border-radius: 50px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #4A90E2 60%, #6fc3ff 100%);
+      color: #fff;
+      font-size: 1.13rem;
+      width: 100%;
+      max-width: 320px;
+      box-shadow: 0 2px 12px rgba(80,120,180,0.10);
+      transition: background 0.2s, color 0.2s;
+    }
+    .modern-contact-btn:hover {
+      background: #4A90E2;
+      color: #fff;
+    }
+    @media (max-width: 700px) {
+      .modern-contact-form {
+        padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+        border-radius: 18px;
+        max-width: 98vw;
+      }
+      .modern-contact-btn {
+        width: 100%;
+        min-width: 0;
+        max-width: 100vw;
+      }
+    }
+    .popup-plus-outline {
+      border: 2.5px solid #4A90E2;
+      border-radius: 20px;
+      background: #fafdff;
+      box-shadow: 0 2px 12px rgba(80,120,180,0.08);
+      margin: 2.2rem 0 1.2rem 0;
+      padding: 1.2rem 1.5rem 1.2rem 1.5rem;
+      position: relative;
+      text-align: left;
+    }
+    .popup-plus-outline-blue {
+      border-color: #4A90E2;
+    }
+    .popup-plus-outline-green {
+      border-color: #27ae60;
+    }
+    .popup-plus-outline-orange {
+      border-color: #e67e22;
+    }
+    .popup-plus-label {
+      position: absolute;
+      top: -1.3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      color: #4A90E2;
+      border: 2.5px solid #4A90E2;
+      font-size: 1.01rem;
+      font-weight: 700;
+      border-radius: 50px;
+      padding: 0.3rem 1.3rem;
+      box-shadow: 0 2px 12px rgba(80,120,180,0.10);
+      z-index: 3;
+      letter-spacing: 0.5px;
+    }
+    .popup-plus-outline-green .popup-plus-label {
+      color: #27ae60;
+      border-color: #27ae60;
+    }
+    .popup-plus-outline-orange .popup-plus-label {
+      color: #e67e22;
+      border-color: #e67e22;
+    }
+    .modern-radio-group {
+      display: flex;
+      gap: 1.2rem;
+      margin: 0.5rem 0 1.2rem 0;
+      flex-wrap: wrap;
+    }
+    .modern-radio {
+      display: flex;
+      align-items: center;
+      font-size: 1.08rem;
+      color: #444;
+      font-weight: 500;
+      background: #f6faff;
+      border-radius: 12px;
+      padding: 0.4rem 1.1rem;
+      border: 1.5px solid #eaf4ff;
+      transition: border-color 0.2s, background 0.2s;
+      cursor: pointer;
+    }
+    .modern-radio input[type="radio"] {
+      accent-color: #4A90E2;
+      margin-right: 0.5rem;
+    }
+    .modern-radio input[type="radio"]:focus {
+      outline: 2px solid #4A90E2;
+    }
+  </style>
   <script>
-    // Scroll reveal
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          obs.unobserve(e.target);
+    document.addEventListener('DOMContentLoaded', function() {
+      // Scroll reveal
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+      // Mobile nav toggle
+      document.querySelector('.nav-toggle').addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.toggle('active');
+      });
+
+      // Show/hide "Other" field
+      document.getElementById('service').addEventListener('change', e => {
+        document.getElementById('other-service-container').style.display =
+          e.target.value === 'Other' ? 'block' : 'none';
+      });
+
+      // Form submission
+      const SHEET_ENDPOINT_URL =
+        'https://script.google.com/macros/s/AKfycbxRzIoHGyCvGb9jX8fl4YKA-Bp24dYCh0eVYl8SdbD1HJ8I4iS3rfhjCTkpUAmhaZvS/exec';
+
+      document.getElementById('contact-form').addEventListener('submit', async e => {
+        e.preventDefault();
+        const f = e.target;
+        const payload = {
+          businessName:  f.businessName.value,
+          yourName:      f.yourName.value,
+          phoneNumber:   f.phoneNumber.value,
+          email:         f.email.value,
+          contactMethod: f.contactMethod.value,
+          service:       f.service.value,
+          otherService:  f.otherService.value
+        };
+        try {
+          const res  = await fetch(SHEET_ENDPOINT_URL, {
+            method: 'POST',
+            body: JSON.stringify(payload)
+          });
+          const json = await res.json();
+          if (json.result === 'success') {
+            f.reset();
+            document.getElementById('other-service-container').style.display = 'none';
+            document.getElementById('thankyou-popup').classList.add('show');
+          }
+        } catch (err) {
+          console.error(err);
         }
       });
-    }, { threshold: 0.2 });
-    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-    // Mobile nav toggle
-    document.querySelector('.nav-toggle').addEventListener('click', () => {
-      document.querySelector('.nav-links').classList.toggle('active');
-    });
+      // Close thank-you popup
+      document.querySelector('#thankyou-popup .close-btn').addEventListener('click', () => {
+        document.getElementById('thankyou-popup').classList.remove('show');
+      });
 
-    // Show/hide "Other" field
-    document.getElementById('service').addEventListener('change', e => {
-      document.getElementById('other-service-container').style.display =
-        e.target.value === 'Other' ? 'block' : 'none';
-    });
+      // Live preview modal toggle
+      const previewBtn  = document.querySelector('.preview-btn');
+      const previewModal = document.getElementById('preview-modal');
+      const closeModal   = previewModal.querySelector('.close-modal');
 
-    // Form submission
-    const SHEET_ENDPOINT_URL =
-      'https://script.google.com/macros/s/AKfycbxRzIoHGyCvGb9jX8fl4YKA-Bp24dYCh0eVYl8SdbD1HJ8I4iS3rfhjCTkpUAmhaZvS/exec';
-
-    document.getElementById('contact-form').addEventListener('submit', async e => {
-      e.preventDefault();
-      const f = e.target;
-      const payload = {
-        businessName:  f.businessName.value,
-        yourName:      f.yourName.value,
-        phoneNumber:   f.phoneNumber.value,
-        email:         f.email.value,
-        contactMethod: f.contactMethod.value,
-        service:       f.service.value,
-        otherService:  f.otherService.value
-      };
-      try {
-        const res  = await fetch(SHEET_ENDPOINT_URL, {
-          method: 'POST',
-          body: JSON.stringify(payload)
+      if (previewBtn && previewModal && closeModal) {
+        previewBtn.addEventListener('click', () => previewModal.classList.add('show'));
+        closeModal.addEventListener('click', () => previewModal.classList.remove('show'));
+        window.addEventListener('click', e => {
+          if (e.target === previewModal) previewModal.classList.remove('show');
         });
-        const json = await res.json();
-        if (json.result === 'success') {
-          f.reset();
-          document.getElementById('other-service-container').style.display = 'none';
-          document.getElementById('thankyou-popup').classList.add('show');
-        }
-      } catch (err) {
-        console.error(err);
       }
-    });
 
-    // Close thank-you popup
-    document.querySelector('#thankyou-popup .close-btn').addEventListener('click', () => {
-      document.getElementById('thankyou-popup').classList.remove('show');
-    });
+      // Service modals logic
+      document.querySelectorAll('.service-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const modalId = this.getAttribute('data-modal');
+          const modal = document.getElementById(modalId);
+          if (modal) modal.classList.add('show');
+        });
+      });
+      document.querySelectorAll('.modal .close-modal').forEach(btn => {
+        btn.addEventListener('click', function() {
+          this.closest('.modal').classList.remove('show');
+        });
+      });
+      window.addEventListener('click', function(e) {
+        document.querySelectorAll('.modal').forEach(modal => {
+          if (e.target === modal) modal.classList.remove('show');
+        });
+      });
 
-    // Live preview modal toggle
-    const previewBtn  = document.querySelector('.preview-btn');
-    const previewModal = document.getElementById('preview-modal');
-    const closeModal   = previewModal.querySelector('.close-modal');
-
-    previewBtn.addEventListener('click', () => previewModal.classList.add('show'));
-    closeModal.addEventListener('click', () => previewModal.classList.remove('show'));
-    window.addEventListener('click', e => {
-      if (e.target === previewModal) previewModal.classList.remove('show');
+      // Testimonial carousel logic
+      const testimonials = document.querySelectorAll('.testimonial-content');
+      const leftArrow = document.querySelector('.carousel-arrow.left');
+      const rightArrow = document.querySelector('.carousel-arrow.right');
+      let current = 0;
+      let interval;
+      function showTestimonial(idx) {
+        testimonials.forEach((el, i) => {
+          el.style.display = i === idx ? '' : 'none';
+        });
+      }
+      function nextTestimonial() {
+        current = (current + 1) % testimonials.length;
+        showTestimonial(current);
+      }
+      function prevTestimonial() {
+        current = (current - 1 + testimonials.length) % testimonials.length;
+        showTestimonial(current);
+      }
+      rightArrow.addEventListener('click', () => {
+        nextTestimonial();
+        resetInterval();
+      });
+      leftArrow.addEventListener('click', () => {
+        prevTestimonial();
+        resetInterval();
+      });
+      function resetInterval() {
+        clearInterval(interval);
+        interval = setInterval(nextTestimonial, 5000);
+      }
+      showTestimonial(current);
+      interval = setInterval(nextTestimonial, 5000);
     });
   </script>
+  <!-- Crisp Chat Widget -->
+  <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="968e6578-f916-4bc4-b6ce-c089b453c9a8";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </body>
 </html>

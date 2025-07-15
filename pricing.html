@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pricing | Tri-Valley Consulting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background: #f6faff;
+    }
+    .pricing-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 4.5rem 0 4rem 0;
+    }
+    .pricing-cards {
+      display: flex;
+      gap: 3.5rem;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-top: 3.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .pricing-card {
+      background: var(--white);
+      border-radius: 28px;
+      box-shadow: 0 8px 32px rgba(80,120,180,0.10);
+      padding: 3.2rem 2.2rem 2.5rem 2.2rem;
+      min-width: 270px;
+      max-width: 340px;
+      text-align: center;
+      position: relative;
+      transition: box-shadow 0.3s, transform 0.3s;
+      border: 2.5px solid transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .pricing-card h3 {
+      font-size: 1.6rem;
+      color: var(--accent-dark);
+      margin-bottom: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .pricing-card .price {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #222;
+      margin-bottom: 0.7rem;
+      letter-spacing: 0.5px;
+    }
+    .pricing-card .desc {
+      color: #555;
+      font-size: 1.13rem;
+      margin-bottom: 1.6rem;
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .pricing-card .rec-badge {
+      position: absolute;
+      top: -22px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #4A90E2;
+      color: #fff;
+      font-size: 1.05rem;
+      font-weight: 700;
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      box-shadow: 0 2px 12px rgba(80,120,180,0.10);
+      letter-spacing: 0.5px;
+      z-index: 2;
+    }
+    .pricing-card.recommended {
+      border-color: #4A90E2;
+      box-shadow: 0 16px 56px rgba(74,144,226,0.13);
+      background: #E8F4FF;
+      transform: scale(1.045);
+    }
+    .pricing-card.recommended h3 {
+      color: #4A90E2;
+    }
+    .pricing-card .btn-primary {
+      margin-top: 1.2rem;
+      font-size: 1.13rem;
+      padding: 1.1rem 2.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      width: 80%;
+      max-width: 220px;
+      min-width: 120px;
+    }
+    @media (max-width: 1100px) {
+      .pricing-cards {
+        gap: 2rem;
+      }
+    }
+    @media (max-width: 900px) {
+      .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.2rem;
+      }
+      .pricing-card {
+        max-width: 95vw;
+        min-width: 0;
+      }
+    }
+    .pricing-note {
+      text-align: center;
+      margin-top: 2.5rem;
+      color: #4A90E2;
+      font-size: 1.18rem;
+      font-weight: 500;
+      background: #E8F4FF;
+      border-radius: 16px;
+      padding: 1.1rem 1.5rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 2px 12px rgba(80,120,180,0.07);
+    }
+    .pricing-top-bg {
+      background: linear-gradient(135deg, #eaf4ff 60%, #f6faff 100%);
+      border-radius: 32px;
+      padding: 2.5rem 2rem 1.5rem 2rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 4px 24px rgba(80,120,180,0.07);
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .pricing-cards-bg {
+      background: #fff;
+      border-radius: 32px;
+      box-shadow: 0 8px 32px rgba(80,120,180,0.10);
+      padding: 2.5rem 1.5rem 2.5rem 1.5rem;
+      margin-bottom: 2.5rem;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    /* Testimonials Section */
+    .testimonials-section {
+      margin: 4rem 0 2.5rem 0;
+      padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .testimonials-title {
+      color: var(--accent-dark);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2.2rem;
+      text-align: center;
+    }
+    .testimonials-grid {
+      display: flex;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;
+      width: 100%;
+      max-width: 1100px;
+    }
+    .testimonial-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+      padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+      min-width: 260px;
+      max-width: 340px;
+      flex: 1 1 260px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    .testimonial-card blockquote {
+      font-size: 1.13rem;
+      font-style: italic;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    .testimonial-card blockquote::before {
+      content: "“";
+      font-size: 2.5rem;
+      color: #A3D5FF;
+      position: absolute;
+      left: 0;
+      top: -10px;
+    }
+    .testimonial-author {
+      font-weight: 600;
+      color: #3498db;
+      margin-left: 0.5rem;
+      font-size: 1.05rem;
+    }
+    .pricing-top-bg-full {
+      width: 100vw;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      background: linear-gradient(135deg, #eaf4ff 60%, #f6faff 100%);
+      border-radius: 0 0 48px 48px;
+      padding: 0 0 2.5rem 0;
+      margin-bottom: 0;
+      box-shadow: none;
+      text-align: center;
+      margin-top: 0 !important;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+    .pricing-section.reveal {
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+    }
+    .pricing-cards-bg-full {
+      width: 100vw;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      background: #fff;
+      border-radius: 48px;
+      box-shadow: 0 8px 32px rgba(80,120,180,0.10);
+      padding: 3.5rem 0 3.5rem 0;
+      margin-bottom: 2.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .pricing-cards-row {
+      display: flex;
+      flex-direction: row;
+      gap: 3.5rem;
+      justify-content: center;
+      align-items: stretch;
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .pricing-card {
+      flex: 1 1 0;
+      min-width: 0;
+    }
+    @media (max-width: 1100px) {
+      .pricing-cards-row {
+        gap: 1.5rem;
+        max-width: 98vw;
+      }
+    }
+    @media (max-width: 900px) {
+      .pricing-cards-bg-full {
+        padding: 2.2rem 0 2.2rem 0;
+      }
+      .pricing-cards-row {
+        gap: 0.7rem;
+      }
+    }
+    @media (max-width: 700px) {
+      .pricing-cards-bg-full {
+        padding: 1.2rem 0 1.2rem 0;
+        border-radius: 32px;
+      }
+      .pricing-cards-row {
+        gap: 0.2rem;
+        max-width: 100vw;
+      }
+      .pricing-card {
+        min-width: 180px;
+        max-width: 98vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="glass reveal">
+    <div class="container header-inner">
+      <div class="logo"><a href="index.html">Tri-Valley Consulting</a></div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+  <main>
+    <section class="pricing-section reveal" style="padding:0;">
+      <div class="pricing-top-bg-full" style="padding-top: 84px;">
+        <h2 style="text-align:center; color: var(--accent-dark); margin-bottom: 0.5rem;">Simple, Transparent Pricing</h2>
+        <p style="text-align:center; color:#555; font-size:1.15rem; margin-bottom: 2.5rem;">Choose the plan that fits your business best. <br>We recommend <span style="color:#4A90E2; font-weight:600;">Plus</span> for most clients!</p>
+      </div>
+      <div class="pricing-cards-bg-full">
+        <div class="pricing-cards-row">
+          <div class="pricing-card">
+            <h3>Essentials</h3>
+            <div class="price">$75 - $250</div>
+            <div class="desc">Get started with a professional website and basic marketing. Perfect for new or small businesses looking for a simple, effective online presence.</div>
+            <a href="index.html#contact" class="btn-primary">Get Started</a>
+          </div>
+          <div class="pricing-card recommended">
+            <div class="rec-badge">Recommended</div>
+            <h3>Plus</h3>
+            <div class="price">$175 - $500</div>
+            <div class="desc">Our best value! More customization, more marketing, and more strategy. Ideal for growing businesses ready to stand out and scale up.</div>
+            <a href="index.html#contact" class="btn-primary">Get Started</a>
+          </div>
+          <div class="pricing-card">
+            <h3>Pro</h3>
+            <div class="price">$400 - $900+</div>
+            <div class="desc">Full-service, fully custom solutions for businesses that want the best in design, marketing, and strategy. Maximum impact, zero compromise.</div>
+            <a href="index.html#contact" class="btn-primary">Get Started</a>
+          </div>
+        </div>
+      </div>
+      <div class="pricing-note">
+        <strong>Why Plus?</strong> The Plus package is our most popular and recommended option—offering the perfect balance of features, customization, and value for most businesses.
+      </div>
+    </section>
+  </main>
+  <footer class="footer reveal">
+    <div class="container footer-content">
+      <div class="footer-logo"><a href="index.html">Tri-Valley Consulting</a></div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+      <p class="footer-copy">© 2025 Tri-Valley Consulting. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    // Scroll reveal
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    // Mobile nav toggle
+    document.querySelector('.nav-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html> 
