@@ -22,11 +22,11 @@
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#contact">Contact Us</a></li>
+          <li><a href="about.html">About Us</a></li>
         </ul>
       </nav>
       <button class="nav-toggle" aria-label="Toggle menu">☰</button>
@@ -83,6 +83,11 @@
             <h3>AI-based Customer Support</h3>
             <p>Smart, automated customer service for your business.</p>
             <button class="btn-secondary service-btn" data-modal="ai-modal">Services</button>
+          </div>
+          <div class="card glass">
+            <div class="icon">✨</div>
+            <h3>And More...</h3>
+            <p>Feel free to contact us if you want a service not mentioned and we will let you know if that is possible.</p>
           </div>
         </div>
       </div>
@@ -864,30 +869,56 @@
       interval = setInterval(nextTestimonial, 5000);
     });
   </script>
-  <!-- Google Agent Chatbot -->
-  <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
-  <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
-  <df-messenger
-    project-id="sonic-potion-465619-m6"
-    agent-id="e0b0b3ce-cd5a-4f31-81ef-5e6fc3edd08d"
-    language-code="en"
-    max-query-length="-1">
-    <df-messenger-chat-bubble
-      chat-title="JamesBot">
-    </df-messenger-chat-bubble>
-  </df-messenger>
-  <style>
-    df-messenger {
-      z-index: 999;
-      position: fixed;
-      --df-messenger-font-color: #000;
-      --df-messenger-font-family: Google Sans;
-      --df-messenger-chat-background: #f3f6fc;
-      --df-messenger-message-user-background: #d3e3fd;
-      --df-messenger-message-bot-background: #fff;
-      bottom: 16px;
-      right: 16px;
-    }
-  </style>
+  <!-- 1. DF-Messenger Stylesheet -->
+<link
+rel="stylesheet"
+href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css"
+/>
+
+<!-- 2. DF-Messenger Script -->
+<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+
+<!-- 3. The Chatbot Element -->
+<df-messenger
+project-id="sonic-potion-465619-m6"
+agent-id="e0b0b3ce-cd5a-4f31-81ef-5e6fc3edd08d"
+language-code="en"
+max-query-length="-1">
+<df-messenger-chat-bubble chat-title="TVC Agent"></df-messenger-chat-bubble>
+</df-messenger>
+
+<!-- 4. One-Time Greeting Script (waits for dfMessengerLoaded) -->
+<script>
+(function() {
+  const STORAGE_KEY = 'TVC_greeted';
+  // only proceed if we haven't greeted yet
+  if (!localStorage.getItem(STORAGE_KEY)) {
+    const bot = document.querySelector('df-messenger');
+    // wait for the widget to finish loading
+    bot.addEventListener('dfMessengerLoaded', () => {
+      bot.renderCustomText(
+        'Hello there! Welcome to the Tri-Valley Consulting website. Feel free to ask if you need help with anything',
+        true
+      );
+      localStorage.setItem(STORAGE_KEY, 'true');
+    });
+  }
+})();
+</script>
+
+<!-- 5. Positioning & Theme Overrides -->
+<style>
+df-messenger {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 999;
+  --df-messenger-font-color: #000;
+  --df-messenger-font-family: 'Poppins', sans-serif;
+  --df-messenger-chat-background: #f3f6fc;
+  --df-messenger-message-user-background: #d3e3fd;
+  --df-messenger-message-bot-background: #fff;
+}
+</style>
 </body>
 </html>
